@@ -8,7 +8,11 @@ pg.init()
 screen = pg.display.set_mode((600,800))
 pg.display.set_caption("Pac-Man (clone)")
 
-
+#musicussy
+pg.mixer.pre_init(44100, 32, 2, 1024)
+pg.mixer.init()
+pg.mixer.music.load("ghost.wav")
+pg.mixer.music.play(loops = 1)
 
 ## Load images ##
 pacman_images = []
