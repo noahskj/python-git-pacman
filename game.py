@@ -11,7 +11,7 @@ pg.display.set_caption("Pac-Man (clone)")
 #musicussy
 pg.mixer.pre_init(44100, 32, 2, 1024)
 pg.mixer.init()
-pg.mixer.music.load("ghost.wav")
+pg.mixer.music.load("rats.wav")
 pg.mixer.music.play(loops = 1)
 
 ## Load images ##
@@ -81,13 +81,13 @@ while running:
         y = y + 5
 
     # Draw level #
-    screen.fill((0,0,0))
+    screen.fill((240,128,128))
     for r, row in enumerate(level):
         for c, tile in enumerate(row):
             left = c*32
             top = r*32
             if tile == "#":
-                pg.draw.rect(screen, (20,20,220), pg.Rect(left+1, top+1, 30,30), 1)
+                pg.draw.rect(screen, (139,0,0), pg.Rect(left+1, top+1, 30,30), 1)
 
 
 
